@@ -105,3 +105,4 @@ export const modelPredictions = [
     recommendation: "Lean"
   }
 ];
+export const mockGameOdds = oddsData;

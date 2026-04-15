@@ -10,13 +10,24 @@ export async function GET(req: NextRequest) {
     const type = searchParams.get('type');
     const sport = searchParams.get('sport');
 
-    let data = type === 'props' ? mockPropPredictions : mockPredictions;
+    if (type === 'props') {
+      const filteredProps = sport
+        ? mockPropPredictions.filter((item) => item.sport === sport)
+        : mockPropPredictions;
 
-    if (sport) {
-      data = data.filter((item: any) => item.sport === sport);
+      return NextResponse.json(filteredProps);
     }
 
-    return NextResponse.json(data);
+    const filteredPredictions = sport
+      ? mockPredictions.filter((item) => {
+          if ('sport' in item) {
+            return item.sport === sport;
+          }
+          return true;
+        })
+      : mockPredictions;
+
+    return NextResponse.json(filteredPredictions);
   } catch (error) {
     return NextResponse.json(
       { error: 'Failed to fetch predictions' },

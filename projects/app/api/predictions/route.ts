@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { mockPredictions, mockPropPredictions } from '@/lib/mock-data';
-
+import { modelPredictions as mockPredictions } from '@/lib/mock-data';
 export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);

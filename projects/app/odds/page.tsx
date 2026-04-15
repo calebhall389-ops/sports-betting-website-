@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { mockGameOdds, SPORTSBOOKS, SPORTS } from '../lib/mock-data';
+import { oddsData, betsData, propsData, modelPredictions } from '@/lib/mock-data'
 import { OddsTable } from '@/components/odds/odds-table';
 import { SportsbookCard } from '@/components/odds/sportsbook-card';
 import { Button } from '@/components/ui/button';

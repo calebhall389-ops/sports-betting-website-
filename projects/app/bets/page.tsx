@@ -1,28 +1,6 @@
 'use client';
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-
-export type Bet = {
-  id: string;
-  date?: string;
-  created_at?: string;
-  sport: string;
-  game: string;
-  betType?: string;
-  market?: string;
-  selection: string;
-  sportsbook: string;
-  odds: number;
-  stake: number;
-  toWin?: number;
-  to_win?: number;
-  result: "win" | "loss" | "push" | "pending";
-  placed_line?: number;
-  closing_line?: number;
-  clv?: number;
-  profit?: number;
-};
-
 const mockBets: Bet[] = [
   {
     id: "1",

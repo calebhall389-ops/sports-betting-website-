@@ -136,3 +136,22 @@ export function formatOdds(odds: number): string {
   }
   return `${odds}`;
 }
+/**
+ * Convert implied probability to American odds
+ * Example: 0.60 → -150, 0.40 → +150
+ */
+export function impliedToAmerican(probability: number): number {
+  if (probability <= 0 || probability >= 1) {
+    throw new Error(
+      "Probability must be between 0 and 1 (exclusive)."
+    );
+  }
+
+  // Favorite (negative odds)
+  if (probability >= 0.5) {
+    return -Math.round((probability / (1 - probability)) * 100);
+  }
+
+  // Underdog (positive odds)
+  return Math.round(((1 - probability) / probability) * 100);
+}

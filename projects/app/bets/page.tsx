@@ -1,6 +1,5 @@
 'use client';
 import { betsData as mockBets } from '@/lib/mock-data';
-import type { Bet } from '@/types/bet'; // Only if you have a Bet type defined
 import { useState, useEffect } from 'react';
 import { supabase } from '@/lib/supabase';
 import { oddsData, betsData, propsData, modelPredictions } from '@/lib/mock-data'

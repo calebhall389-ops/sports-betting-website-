@@ -10,7 +10,7 @@ export const oddsData = [
     impliedProbability: 52.38,
     fairOdds: -102,
     ev: 3.2,
-    clv: 1.4,
+    clv: 1.4
   },
   {
     id: "2",
@@ -23,20 +23,7 @@ export const oddsData = [
     impliedProbability: 55.56,
     fairOdds: -110,
     ev: 4.1,
-    clv: 2.1,
-  },
-  {
-    id: "3",
-    sport: "NFL",
-    game: "Chiefs vs Bills",
-    market: "Total",
-    selection: "Over 48.5",
-    sportsbook: "BetMGM",
-    odds: -105,
-    impliedProbability: 51.22,
-    fairOdds: -115,
-    ev: 2.7,
-    clv: 0.9,
+    clv: 2.1
   }
 ];
 

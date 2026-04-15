@@ -1,6 +1,6 @@
 'use client';
 
-import { mockPerformanceStats, mockAlerts, mockDailyPnL } from '@/lib/mock-data';
+import { oddsData, betsData, propsData, modelPredictions } from '@/lib/mock-data'
 import { StatsCard } from '@/components/shared/stats-card';
 import { AlertCard } from '@/components/shared/alert-card';
 import { PnLChart, DailyPnLChart, SportBreakdownChart, BookBreakdownChart, WinRateChart } from '@/components/dashboard/performance-charts';

@@ -1,20 +1,15 @@
-import { NextRequest, NextResponse } from 'next/server';
-// projects/app/props/page.tsx
-
+import { NextResponse } from 'next/server';
 import { propsData as mockPropPredictions } from '@/lib/mock-data';
 
-export default function PropsPage() {
-  return (
-    <div>
-      <h1 className="text-2xl font-bold mb-4">Player Prop Predictions</h1>
-      {mockPropPredictions.map((prop) => (
-        <div key={prop.id}>
-          {prop.player} — {prop.prop}
-        </div>
-      ))}
-    </div>
-  );
-}
+export async function GET() {
+  try {
+    return NextResponse.json(mockPropPredictions);
+  } catch (error) {
+    return NextResponse.json(
+      { error: 'Failed to fetch predictions' },
+      { status: 500 }
+    );
+  }
 export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);

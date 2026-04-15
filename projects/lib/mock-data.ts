@@ -106,3 +106,9 @@ export const modelPredictions = [
   }
 ];
 export const mockGameOdds = oddsData;
+export function americanToImplied(odds: number): number {
+  if (odds > 0) {
+    return 100 / (odds + 100);
+  }
+  return Math.abs(odds) / (Math.abs(odds) + 100);
+}

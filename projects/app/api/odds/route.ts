@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { mockGameOdds } from '../lib/mock-data';
+import { mockGameOdds } from '@/lib/mock-data';
 
 export async function GET(req: NextRequest) {
   try {

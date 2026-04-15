@@ -2,20 +2,17 @@
 
 import { mockDailyPnL, mockSportBreakdown, mockBookBreakdown } from '@/lib/mock-data';
 import {
-  AreaChart,
-  Area,
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-  Cell,
-  PieChart,
-  Pie,
-  Legend,
-} from 'recharts';
+  BookOpen,
+  Brain,
+  Calculator,
+  BarChart3,
+  ChevronRight,
+  LayoutDashboard,
+  Settings,
+  TrendingUp,
+  Users,
+  Zap,
+} from "lucide-react";
 import { cn } from '@/lib/utils';
 
 interface ChartCardProps {
@@ -120,7 +117,7 @@ export function DailyPnLChart() {
               <Cell key={`cell-${index}`} fill={entry.profit >= 0 ? '#10b981' : '#ef4444'} />
             ))}
           </Bar>
-        </BarChart>
+        </BarChart3>
       </ResponsiveContainer>
     </ChartCard>
   );
@@ -166,7 +163,7 @@ export function SportBreakdownChart() {
               <Cell key={`cell-${index}`} fill={entry.roi >= 0 ? '#3b82f6' : '#ef4444'} />
             ))}
           </Bar>
-        </BarChart>
+        </BarChart3>
       </ResponsiveContainer>
     </ChartCard>
   );

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { supabase } from '@/lib/supabase';
-import { mockBets, mockPerformanceStats } from '@/lib/mock-data';
+import { oddsData, betsData, propsData, modelPredictions } from '@/lib/mock-data'
 import { BetForm } from '@/components/betting/bet-form';
 import { BetHistoryTable } from '@/components/betting/bet-history-table';
 import { StatsCard } from '@/components/shared/stats-card';

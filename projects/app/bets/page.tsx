@@ -17,19 +17,6 @@ const mockBets: Bet[] = [
     clv: 10,
     profit: 0,
   },
-];
-
-export default function BetsPage() {
-  const [bets, setBets] = useState<Bet[]>(mockBets);
-
-  return (
-    <div className={cn("p-6")}>
-      <h1 className="text-2xl font-bold mb-4">Bet Tracker</h1>
-      <p>Total Bets: {bets.length}</p>
-    </div>
-  );
-}
-
 import { betsData as mockBets } from '@/lib/mock-data';
 import { useState, useEffect } from 'react';
 import { supabase } from '@/lib/supabase';

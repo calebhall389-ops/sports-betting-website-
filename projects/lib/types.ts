@@ -9,8 +9,24 @@ export type Market =
   | 'first_half'
   | 'first_quarter'
   | 'futures';
-
-export type BetResult = 'win' | 'loss' | 'push' | 'pending' | 'void';
+import type { Bet } from "@/lib/types";
+export const betsData: Bet[] = [
+  {
+    id: "1",
+    date: "2026-04-15",
+    sport: "MLB",
+    game: "Yankees vs Red Sox",
+    betType: "Moneyline",
+    selection: "Yankees",
+    sportsbook: "DraftKings",
+    odds: -120,
+    stake: 50,
+    toWin: 41.67,
+    result: "pending",
+    clv: 10,
+    profit: 0,
+  },
+];
 
 export type Sportsbook =
   | 'DraftKings'

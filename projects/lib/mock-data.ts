@@ -112,22 +112,17 @@ export function americanToImplied(odds: number): number {
   }
   return Math.abs(odds) / (Math.abs(odds) + 100);
 }
-
 export function americanToDecimal(odds: number): number {
   if (odds > 0) {
     return 1 + odds / 100;
   }
   return 1 + 100 / Math.abs(odds);
 }
-
 export function calculateProfit(odds: number, stake: number): number {
   const decimal = americanToDecimal(odds);
   return (decimal - 1) * stake;
 }
-
 export function calculateEV(probability: number, americanOdds: number): number {
   const decimalOdds = americanToDecimal(americanOdds);
   return probability * (decimalOdds - 1) - (1 - probability);
 }
-
-export const mockGameOdds = oddsData;

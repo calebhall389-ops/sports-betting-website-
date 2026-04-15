@@ -1,21 +1,40 @@
 'use client';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-const mockBets: Bet[] = [
-  {
-    id: "1",
-    date: "2026-04-15",
-    sport: "MLB",
-    game: "Yankees vs. Red Sox",
-    betType: "Moneyline",
-    selection: "Yankees",
-    sportsbook: "DraftKings",
-    odds: -120,
-    stake: 50,
-    toWin: 41.67,
-    result: "pending",
-    clv: 10,
-    profit: 0,
+import { supabase } from "@/lib/supabase";
+import {
+  oddsData,
+  betsData as mockBets,
+  propsData,
+  modelPredictions,
+} from "@/lib/mock-data";
+import type { Bet } from "@/lib/types";
+
+export default function BetsPage() {
+  const [bets, setBets] = useState<Bet[]>(mockBets);
+
+  useEffect(() => {
+    // Example Supabase fetch
+    const fetchBets = async () => {
+      const { data, error } = await supabase.from("bets").select("*");
+
+      if (error) {
+        console.error("Error fetching bets:", error);
+      } else if (data) {
+        setBets(data as Bet[]);
+      }
+    };
+
+    fetchBets();
+  }, []);
+
+  return (
+    <div className={cn("p-6")}>
+      <h1 className="text-2xl font-bold mb-4">Bet Tracker</h1>
+      <p>Total Bets: {bets.length}</p>
+    </div>
+  );
+}
   },
 import { betsData as mockBets } from '@/lib/mock-data';
 import { useState, useEffect } from 'react';

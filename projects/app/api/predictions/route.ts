@@ -1,5 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { modelPredictions as mockPredictions } from '@/lib/mock-data';
+// projects/app/props/page.tsx
+
+import { propsData as mockPropPredictions } from '@/lib/mock-data';
+
+export default function PropsPage() {
+  return (
+    <div>
+      <h1 className="text-2xl font-bold mb-4">Player Prop Predictions</h1>
+      {mockPropPredictions.map((prop) => (
+        <div key={prop.id}>
+          {prop.player} — {prop.prop}
+        </div>
+      ))}
+    </div>
+  );
+}
 export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);

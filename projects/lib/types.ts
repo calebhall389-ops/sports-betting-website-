@@ -221,3 +221,25 @@ export interface DailyPnL {
   cumulative: number;
   bets: number;
 }
+export type BetResult = "win" | "loss" | "push" | "pending";
+
+export type Bet = {
+  id: string;
+  date?: string;
+  created_at?: string;
+  sport: string;
+  game: string;
+  betType?: string;
+  market?: string;
+  selection: string;
+  sportsbook: string;
+  odds: number;
+  stake: number;
+  toWin?: number;
+  to_win?: number;
+  result: BetResult;
+  placed_line?: number;
+  closing_line?: number;
+  clv?: number;
+  profit?: number;
+};

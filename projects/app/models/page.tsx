@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { mockPredictions, mockPropPredictions, formatOdds, americanToImplied } from '@/lib/mock-data';
+import { oddsData, betsData, propsData, modelPredictions } from '@/lib/mock-data'
 import { EVBadge } from '@/components/betting/ev-badge';
 import { Brain, TrendingUp, TrendingDown, Shield, Clock, Zap, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';

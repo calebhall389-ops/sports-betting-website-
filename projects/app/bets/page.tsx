@@ -1,9 +1,7 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import { betsData as mockBets } from "@/lib/mock-data";
 import { supabase } from "@/lib/supabase";
-
 type Bet = {
   id: string;
   date?: string;

@@ -12,7 +12,26 @@ import { CirclePlus as PlusCircle, DollarSign, TrendingUp, Target, Activity, X }
 import { cn } from '@/lib/utils';
 
 export default function BetsPage() {
-  const [bets, setBets] = useState<Bet[]>(mockBets);
+  export type Bet = {
+  id: string;
+  date?: string;
+  created_at?: string;
+  sport: string;
+  game: string;
+  betType?: string;
+  market?: string;
+  selection: string;
+  sportsbook: string;
+  odds: number;
+  stake: number;
+  toWin?: number;
+  to_win?: number;
+  result: "win" | "loss" | "push" | "pending";
+  placed_line?: number;
+  closing_line?: number;
+  clv?: number;
+  profit?: number;
+};
   const [showForm, setShowForm] = useState(false);
   const [loading, setLoading] = useState(true);
 

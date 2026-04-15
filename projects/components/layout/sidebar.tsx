@@ -2,7 +2,18 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, TrendingUp, Calculator, BookOpen, Users, Brain, Settings, Zap, ChartBar as BarChart3, ChevronRight } from 'lucide-react';
+import {
+  BookOpen,
+  Brain,
+  Calculator,
+  BarChart3,
+  ChevronRight,
+  LayoutDashboard,
+  Settings,
+  TrendingUp,
+  Users,
+  Zap,
+} from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navItems = [

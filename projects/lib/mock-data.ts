@@ -539,3 +539,37 @@ export const mockAlerts: Alert[] = [
     status: "new"
   }
 ];
+import type { Bet } from "@/lib/types";
+
+export const betsData: Bet[] = [
+  {
+    id: "1",
+    date: "2026-04-15",
+    sport: "MLB",
+    game: "Yankees vs Red Sox",
+    betType: "Moneyline",
+    selection: "Yankees",
+    sportsbook: "DraftKings",
+    odds: -120,
+    stake: 50,
+    toWin: 41.67,
+    result: "pending",
+    clv: 10,
+    profit: 0,
+  },
+  {
+    id: "2",
+    date: "2026-04-15",
+    sport: "NBA",
+    game: "Lakers vs Warriors",
+    betType: "Spread",
+    selection: "Lakers -4.5",
+    sportsbook: "FanDuel",
+    odds: -110,
+    stake: 40,
+    toWin: 36.36,
+    result: "win",
+    clv: 8,
+    profit: 36.36,
+  },
+];

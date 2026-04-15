@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 26% 7%;
+    --foreground: 213 31% 91%;
+    --card: 220 26% 10%;
+    --card-foreground: 213 31% 91%;
+    --popover: 220 26% 10%;
+    --popover-foreground: 213 31% 91%;
+    --primary: 210 100% 56%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 26% 15%;
+    --secondary-foreground: 213 31% 91%;
+    --muted: 220 26% 15%;
+    --muted-foreground: 215 20% 55%;
+    --accent: 155 80% 40%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 26% 17%;
+    --input: 220 26% 17%;
+    --ring: 210 100% 56%;
+    --radius: 0.5rem;
+    --chart-1: 210 100% 56%;
+    --chart-2: 155 80% 40%;
+    --chart-3: 38 92% 50%;
+    --chart-4: 0 72% 51%;
+    --chart-5: 262 80% 65%;
+    --sidebar: 220 26% 8%;
+    --sidebar-border: 220 26% 14%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+}
+
+@layer utilities {
+  .text-positive {
+    @apply text-emerald-400;
+  }
+  .text-negative {
+    @apply text-red-400;
+  }
+  .text-neutral {
+    @apply text-slate-400;
+  }
+  .bg-card-elevated {
+    background: hsl(220 26% 13%);
+  }
+  .gradient-border {
+    border: 1px solid hsl(var(--border));
+    background: linear-gradient(135deg, hsl(220 26% 11%) 0%, hsl(220 26% 9%) 100%);
+  }
+  .glow-blue {
+    box-shadow: 0 0 20px hsl(210 100% 56% / 0.15);
+  }
+  .glow-green {
+    box-shadow: 0 0 20px hsl(155 80% 40% / 0.15);
+  }
+}
+
+.odds-positive {
+  @apply text-emerald-400 font-semibold;
+}
+.odds-negative {
+  @apply text-slate-200 font-semibold;
+}
+.best-odds {
+  @apply bg-emerald-500/10 text-emerald-400 rounded px-1.5 py-0.5 font-bold;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.live-indicator {
+  animation: pulse-glow 2s ease-in-out infinite;
+}

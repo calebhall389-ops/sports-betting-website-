@@ -4,8 +4,15 @@ import { oddsData, betsData, propsData, modelPredictions } from '@/lib/mock-data
 import { StatsCard } from '@/components/shared/stats-card';
 import { AlertCard } from '@/components/shared/alert-card';
 import { PnLChart, DailyPnLChart, SportBreakdownChart, BookBreakdownChart, WinRateChart } from '@/components/dashboard/performance-charts';
-import { TrendingUp, DollarSign, Target, Activity, ChartBar as BarChart3, TriangleAlert as AlertTriangle, Zap } from 'lucide-react';
-
+import {
+  Activity,
+  BarChart3,
+  DollarSign,
+  Target,
+  TrendingUp,
+  TriangleAlert,
+  Zap
+} from "lucide-react";
 export default function DashboardPage() {
   const stats = mockPerformanceStats;
   const unreadAlerts = mockAlerts.filter((a) => !a.is_read);

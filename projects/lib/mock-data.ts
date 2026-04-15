@@ -1,9 +1,5 @@
 import type { Bet } from "@/lib/types";
 
-/**
- * Mock Bets Data
- * Used for development before connecting to Supabase or a live API.
- */
 export const betsData: Bet[] = [
   {
     id: "1",
@@ -52,9 +48,6 @@ export const betsData: Bet[] = [
   },
 ];
 
-/**
- * Mock Odds Data
- */
 export const oddsData = [
   {
     id: "1",
@@ -76,9 +69,37 @@ export const oddsData = [
   },
 ];
 
-/**
- * Mock Player Props Data
- */
+export const mockGameOdds = [
+  {
+    id: "1",
+    sport: "NBA",
+    game: "Lakers vs Warriors",
+    homeTeam: "Lakers",
+    awayTeam: "Warriors",
+    sportsbook: "FanDuel",
+    market: "spread",
+    homeOdds: -110,
+    awayOdds: -110,
+    homeLine: -4.5,
+    awayLine: 4.5,
+    startTime: "2026-04-15T19:00:00Z",
+  },
+  {
+    id: "2",
+    sport: "MLB",
+    game: "Yankees vs Red Sox",
+    homeTeam: "Yankees",
+    awayTeam: "Red Sox",
+    sportsbook: "DraftKings",
+    market: "moneyline",
+    homeOdds: -120,
+    awayOdds: 100,
+    homeLine: -120,
+    awayLine: 100,
+    startTime: "2026-04-15T23:10:00Z",
+  },
+];
+
 export const propsData = [
   {
     id: "1",
@@ -98,15 +119,12 @@ export const propsData = [
     game: "Yankees vs Red Sox",
     prop: "Home Runs",
     line: 0.5,
-    overOdds: +300,
+    overOdds: 300,
     underOdds: -400,
     sportsbook: "DraftKings",
   },
 ];
 
-/**
- * Mock AI Model Predictions
- */
 export const modelPredictions = [
   {
     id: "1",

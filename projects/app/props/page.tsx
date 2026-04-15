@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { mockPlayerProps, mockPropPredictions, formatOdds, americanToImplied } from '@/lib/mock-data';
+import { oddsData, betsData, propsData, modelPredictions } from '@/lib/mock-data'
 import { EVBadge } from '@/components/betting/ev-badge';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';

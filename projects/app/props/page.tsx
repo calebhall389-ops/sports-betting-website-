@@ -5,7 +5,7 @@ import { oddsData, betsData, propsData, modelPredictions } from '@/lib/mock-data
 import { EVBadge } from '@/components/betting/ev-badge';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { SPORTS } from '../lib/mock-data';
+import { SPORTS } from '@/lib/mock-data';
 import { Search, Brain, TrendingUp, TrendingDown, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { PropPrediction } from '@/lib/types';

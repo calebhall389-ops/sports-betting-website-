@@ -1,5 +1,5 @@
 'use client';
-
+import { ChartCard } from "@/components/dashboard/chart-card";
 import { mockDailyPnL, mockSportBreakdown, mockBookBreakdown } from '@/lib/mock-data';
 import {
   BookOpen,

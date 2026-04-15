@@ -8,8 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { SPORTS } from '@/lib/mock-data';
 import { Search, Brain, TrendingUp, TrendingDown, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import type { PropPrediction } from '@/lib/types';
-
+import { propsData as mockPropPredictions } from '@/lib/mock-data';
 const CONFIDENCE_TIERS = [
   { min: 70, label: 'High', color: 'text-emerald-400 bg-emerald-500/15 border-emerald-500/25' },
   { min: 60, label: 'Medium', color: 'text-amber-400 bg-amber-500/15 border-amber-500/25' },

@@ -126,3 +126,13 @@ export function calculateEV(probability: number, americanOdds: number): number {
   const decimalOdds = americanToDecimal(americanOdds);
   return probability * (decimalOdds - 1) - (1 - probability);
 }
+/**
+ * Format American odds for display
+ * Example: +150, -110
+ */
+export function formatOdds(odds: number): string {
+  if (odds > 0) {
+    return `+${odds}`;
+  }
+  return `${odds}`;
+}
